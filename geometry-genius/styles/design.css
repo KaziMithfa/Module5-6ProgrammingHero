@@ -1,0 +1,14 @@
+.card-body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem; /* Adjust spacing between elements */
+}
+
+input[type="text"] {
+  width: 45%; /* Adjust width to fit inputs side by side */
+  /* box-sizing: border-box;  */
+}
+
+.card {
+  margin-bottom: 1rem;
+}

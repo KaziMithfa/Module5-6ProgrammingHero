@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble revision</title>
+</head>
+
+<body>
+
+    <h1>Exploring Event Bubble</h1>
+    <section id="list-container">
+        <ul id="list-ul">
+            <li id="item-1">Lorem, ipsum.</li>
+            <li id="item-2">Eos, fugiat?</li>
+            <li id="item-3">Doloribus, reprehenderit.</li>
+            <li id="item-4">Hic, autem.</li>
+            <li id="item-5">Facilis, atque?</li>
+            <li id="item-6">Corrupti, accusantium?</li>
+        </ul>
+    </section>
+
+    <script>
+
+        document.getElementById('item-2').addEventListener('click', function (event) {
+            console.log("item 2 is clicked");
+
+
+        })
+
+        document.getElementById('item-2').addEventListener('click', function (event) {
+            console.log("item 2 is clicked twice");
+
+        })
+
+        document.getElementById('list-ul').addEventListener('click', function () {
+            console.log("ul is also clicked");
+        })
+
+        document.getElementById('list-container').addEventListener('click', function () {
+            console.log("container is also clicked");
+        })
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

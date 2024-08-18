@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Comment</title>
+</head>
+
+<body>
+    <h1>Please add your comment</h1>
+    <div id="comment-container">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quas facilis odio dolor excepturi ratione nam
+            est magni fugit officia, dicta necessitatibus aspernatur corrupti illo nemo, distinctio harum sapiente
+            dignissimos.</p>
+
+        <p>Veritatis culpa, mollitia maiores eaque nesciunt dolor voluptatem voluptatibus vitae ducimus aperiam? Illo
+            aliquid ipsam rerum. Explicabo modi cum nemo, obcaecati veritatis ullam commodi, mollitia, delectus tenetur
+            necessitatibus eveniet illo.</p>
+
+        <p>Odit laboriosam, hic temporibus maiores aperiam placeat tenetur reprehenderit iste? Amet, ipsa? Fuga eligendi
+            dolor ipsum fugit deserunt voluptates, tenetur adipisci ratione at fugiat velit perferendis eum nemo
+            aspernatur provident.</p>
+    </div>
+
+    <div>
+        <textarea name="" id="new-comment" cols="60" rows="5"></textarea>
+        <br>
+        <button id="btn-post">post</button>
+    </div>
+
+
+    <script>
+
+        //step1: addEventListner to the post button
+        document.getElementById('btn-post').addEventListener('click', function () {
+            //step2: get the comment inside the textarea
+
+            const commentBox = document.getElementById('new-comment');
+            const newComment = commentBox.value;
+
+            //step3: set the comment inside the comment container
+            const commentContainer = document.getElementById('comment-container');
+            const p = document.createElement('p');
+            p.innerText = newComment;
+            commentContainer.appendChild(p);
+
+            //step4 : clear the textArea
+
+            commentBox.value = "";
+
+
+
+
+
+        })
+
+
+    </script>
+
+</body>
+
+</html>
