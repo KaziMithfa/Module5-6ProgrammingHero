@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicing Dom</title>
+
+    <link rel="stylesheet" href="styles/practice.css">
+
+    <!-- Daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+</head>
+
+<body>
+
+    <!-- Conceptual session -->
+
+    <h1 class="m-40">Total Budget: 900$</h1>
+
+    <section class="card-section mt-20 ml-8">
+        <div class="card-container flex flex-row gap-x-5">
+
+            <div class="cards m-14">
+
+                <div class="flex flex-row gap-x-6 mt-6">
+
+                    <img src="images/heart.svg" class="w-14 h-14" alt="">
+                    <div>
+                        <h4 id="shajek">Shajek</h4>
+                        <h4 id="cost">Cost: <span class="price">300</span>$</h4>
+                        <button class="bg-cyan-900 add-btn">Add to Cart</button>
+                    </div>
+
+
+                </div>
+
+                <div class="flex flex-row gap-x-6 mt-6">
+
+                    <img src="images/heart.svg" class="w-14 h-14" alt="">
+                    <div>
+                        <h4 id="shajek">Shajek</h4>
+                        <h4 id="cost">Cost: <span class="price">300</span>$</h4>
+                        <button class="bg-cyan-900 add-btn">Add to Cart</button>
+                    </div>
+
+
+                </div>
+
+                <div class="flex flex-row gap-x-6 mt-6">
+
+                    <img src="images/heart.svg" class="w-14 h-14" alt="">
+                    <div>
+                        <h4 id="shajek">Shajek</h4>
+                        <h4 id="cost">Cost: <span class="price">300</span>$</h4>
+                        <button class="bg-cyan-900 add-btn">Add to Cart</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="display mt-20">
+
+                <h1>Cart</h1>
+                <hr>
+                <ul id="selected-place-container" class="selected-place-container">
+
+                </ul>
+
+
+                <p class="mt-5">Total Cost: <span id="total-cost">0</span>$</p>
+                <button id="bus" class="bg-cyan-900">Bus + 100</button>
+                <button id="train" class="bg-cyan-900">Train + 200</button>
+                <button id="flight" class="bg-cyan-900">Flight + 500</button>
+                <hr>
+                <p>Grand Total: <span id="grand-total">0</span>$</p>
+
+
+            </div>
+
+
+
+
+    </section>
+
+
+    <script src="scripts/test.js"></script>
+
+
+
+</body>
+
+</html>

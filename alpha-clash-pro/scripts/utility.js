@@ -121,7 +121,6 @@ function setTextElementById(elementId, value) {
 
 function getElementTextById(elementId) {
   const element = document.getElementById(elementId);
-  const textS = element.innerText;
-  const text = textS.toLocaleLowerCase();
+  const text = element.innerText;
   return text;
 }

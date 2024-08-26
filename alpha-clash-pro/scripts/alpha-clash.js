@@ -133,6 +133,11 @@
 
 function handleKeyBoardPressButton(event) {
   const pressedAlphabet = event.key;
+
+  if (pressedAlphabet === "Escape") {
+    gameOver();
+  }
+
   const expectedAlphabetId = document.getElementById("current-alphabet");
   const expectedAlphabetText = expectedAlphabetId.innerText;
   const expectedAlphabet = expectedAlphabetText.toLowerCase();
@@ -183,6 +188,6 @@ function gameOver() {
   const lastScore = getTextElementValueById("current-score");
   setTextElementById("game-score", lastScore);
 
-  const currentAlphabet = document.getElementTextById("current-alphabet");
+  const currentAlphabet = getElementTextById("current-alphabet");
   removeBackgroundColorofAlphabet(currentAlphabet);
 }
