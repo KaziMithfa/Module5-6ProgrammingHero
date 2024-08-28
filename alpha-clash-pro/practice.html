@@ -20,7 +20,7 @@
 
     <!-- Conceptual session -->
 
-    <h1 class="m-40">Total Budget: 900$</h1>
+    <h1 class="m-40">Total Budget: <span id="total-budget">900</span>$</h1>
 
     <section class="card-section mt-20 ml-8">
         <div class="card-container flex flex-row gap-x-5">
@@ -75,9 +75,9 @@
 
 
                 <p class="mt-5">Total Cost: <span id="total-cost">0</span>$</p>
-                <button id="bus" class="bg-cyan-900">Bus + 100</button>
-                <button id="train" class="bg-cyan-900">Train + 200</button>
-                <button id="flight" class="bg-cyan-900">Flight + 500</button>
+                <button id="bus" onclick="grandTotal('bus')" class="bg-cyan-900">Bus + 100</button>
+                <button id="train" onclick="grandTotal('train')" class="bg-cyan-900">Train + 200</button>
+                <button id="flight" onclick="grandTotal('flight')" class="bg-cyan-900">Flight + 500</button>
                 <hr>
                 <p>Grand Total: <span id="grand-total">0</span>$</p>
 

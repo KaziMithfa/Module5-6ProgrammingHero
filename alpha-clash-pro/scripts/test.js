@@ -16,10 +16,19 @@ for (const btn of allBtn) {
     li.appendChild(p1);
     li.appendChild(p2);
 
-    selectContainer.appendChild(li);
+    const budget = document.getElementById("total-budget").innerText;
+    const convertedBudget = parseInt(budget);
 
+    if (convertedBudget - parseInt(price) < 0) {
+      alert("low budget please earn more");
+      return;
+    }
+
+    document.getElementById("total-budget").innerText =
+      convertedBudget - parseInt(price);
+    selectContainer.appendChild(li);
     totalCost("total-cost", parseInt(price));
-    grandTotal("grand-total", parseInt(price));
+    grandTotal("others");
   });
 }
 
@@ -30,11 +39,19 @@ function totalCost(id, value) {
   setInnerText(id, sum);
 }
 
-function grandTotal(id, value) {
-  const totalCost = document.getElementById(id).innerText;
+function grandTotal(category) {
+  const totalCost = document.getElementById("total-cost").innerText;
   const convertedTotalCost = parseInt(totalCost);
-  const sum = convertedTotalCost + parseInt(value);
-  setInnerText(id, sum);
+
+  if (category == "bus") {
+    setInnerText("grand-total", convertedTotalCost + 100);
+  } else if (category == "train") {
+    setInnerText("grand-total", convertedTotalCost + 200);
+  } else if (category == "flight") {
+    setInnerText("grand-total", convertedTotalCost + 500);
+  } else {
+    setInnerText("grand-total", convertedTotalCost);
+  }
 }
 
 function setInnerText(id, value) {
