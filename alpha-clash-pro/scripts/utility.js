@@ -80,7 +80,6 @@ function showElementById(elementId) {
 function CreateARandomAlphabet() {
   const alphabetStrings = "abcdefghijklmnopqrstuvwxyz";
   const alphabetArray = alphabetStrings.split("");
-  console.log(alphabetArray);
 
   const randomValue = Math.random() * 25;
   const index = Math.round(randomValue);

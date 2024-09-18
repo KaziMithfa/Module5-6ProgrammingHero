@@ -189,5 +189,6 @@ function gameOver() {
   setTextElementById("game-score", lastScore);
 
   const currentAlphabet = getElementTextById("current-alphabet");
+  console.log(currentAlphabet);
   removeBackgroundColorofAlphabet(currentAlphabet);
 }
