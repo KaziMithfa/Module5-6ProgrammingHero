@@ -16,6 +16,7 @@
     <header>
         <h2 class="text-6xl">Hunting Phone</h2>
 
+
     </header>
 
     <main class="container mx-auto mt-8">
@@ -64,13 +65,36 @@
             </div>
 
             <!-- show all button -->
-            <div id="show-all-container" class="hidden">
+            <div id="show-all-container" onclick="handleShowAll()" class="hidden text-center my-8">
                 <button class="btn btn-accent">Show All</button>
             </div>
 
 
 
         </section>
+
+        <!-- show details modal  -->
+
+        <!-- Open the modal using ID.showModal() method -->
+        <button class="btn" onclick="showDetails_modal.showModal()">open modal</button>
+        <dialog id="showDetails_modal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <h3 id="show-detail-phone-name" class="text-3xl font-bold">Hello!</h3>
+                <div id="show-detail-container">
+
+
+                </div>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
+
 
     </main>
 
