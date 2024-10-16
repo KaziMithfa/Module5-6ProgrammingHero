@@ -3,12 +3,13 @@ const loadPhone = async (searchText, isShowAll) => {
     `https://openapi.programming-hero.com/api/phones?search=${searchText}`
   );
   const data = await res.json();
+  console.log(data);
   const phones = data.data;
   displayPhones(phones, isShowAll);
 };
 
 const displayPhones = (phones, isShowAll) => {
-  console.log(phones);
+  //console.log(phones);
   //1.
   const phoneContainer = document.getElementById("phone-container");
   // clear phone container before adding new cards
@@ -63,7 +64,7 @@ const handleSearch = (isShowAll) => {
   toogleLoadingSpinner(true);
   const searchField = document.getElementById("search-field");
   const searchText = searchField.value;
-  console.log(searchText);
+  //console.log(searchText);
   loadPhone(searchText, isShowAll);
 };
 
@@ -95,7 +96,7 @@ const handleShowDetails = async (id) => {
 
 const showPhoneDetails = (phone) => {
   //show the modal
-  console.log(phone);
+  //console.log(phone);
 
   const phoneName = document.getElementById("show-detail-phone-name");
   phoneName.innerText = phone.name;
