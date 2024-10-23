@@ -1,0 +1,2 @@
+Learning JavaScript and here is the command for creating a React application 
+npm create vite@latest my-first-react -- --template react
