@@ -14,8 +14,16 @@ function App() {
     setBookmarks(newBookmarks);
   };
 
-  const handleMarkasRead = (time) => {
+  const handleMarkasRead = (time, id) => {
     setreadingTime(readingTime + time);
+    // remove the read blog from bookmarks
+
+    const remainingBookMarks = bookmarks.filter(
+      (bookmark) => bookmark.id !== id
+    );
+    setBookmarks(remainingBookMarks);
+
+    console.log("remove bookmark ", id);
   };
 
   // const handleAddToBookMark = (blog) => {
