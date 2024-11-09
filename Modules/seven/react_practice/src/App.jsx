@@ -10,6 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   const [bookmarks, setBookmarks] = useState([]);
   const [count, setCount] = useState(0);
+  const [preparings, setPreparings] = useState([]);
 
   const handleAddToBookMark = (blog) => {
     const isExist = bookmarks.find((bookmark) => bookmark.id === blog.id);
@@ -21,6 +22,15 @@ function App() {
     } else {
       toast("Already added");
     }
+  };
+
+  const handleDeleteBookMark = (id) => {
+    const newBookMarks = bookmarks.filter((item) => item.id !== id);
+
+    const newPreparings = bookmarks.find((bookmark) => bookmark.id === id);
+    setBookmarks(newBookMarks);
+    const updatedPreparings = [...preparings, newPreparings];
+    setPreparings(updatedPreparings);
   };
 
   return (
@@ -39,7 +49,11 @@ function App() {
             </div>
 
             <div className="bookmark-container w-[40%]  mr-4">
-              <Bookmarks count={count} bookmarks={bookmarks}></Bookmarks>
+              <Bookmarks
+                count={count}
+                bookmarks={bookmarks}
+                handleDeleteBookMark={handleDeleteBookMark}
+              ></Bookmarks>
 
               <div className="mt-3">
                 <Details></Details>

@@ -2,8 +2,7 @@ import PropTypes from "prop-types";
 import Bookmark from "../components/Bookmark/Bookmark";
 import "./Bookmarks.css";
 
-const Bookmarks = ({ bookmarks, count }) => {
-  console.log("Bookmarks in bookmarks", bookmarks);
+const Bookmarks = ({ bookmarks, count, handleDeleteBookMark }) => {
   return (
     <div className=" border-[1px] border-red-600 border-solid ">
       <h3 className="text-center">Bookmarks: {count}</h3>
@@ -31,7 +30,12 @@ const Bookmarks = ({ bookmarks, count }) => {
       </table>
 
       {bookmarks.map((bookmark, idx) => (
-        <Bookmark key={bookmark.id} idx={idx} bookmark={bookmark}></Bookmark>
+        <Bookmark
+          key={bookmark.id}
+          idx={idx}
+          bookmark={bookmark}
+          handleDeleteBookMark={handleDeleteBookMark}
+        ></Bookmark>
       ))}
     </div>
   );
@@ -39,6 +43,8 @@ const Bookmarks = ({ bookmarks, count }) => {
 
 Bookmarks.propTypes = {
   bookmarks: PropTypes.array.isRequired,
+  count: PropTypes.number.isRequired,
+  handleDeleteBookMark: PropTypes.func.isRequired,
 };
 
 export default Bookmarks;

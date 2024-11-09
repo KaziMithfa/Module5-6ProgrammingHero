@@ -1,8 +1,6 @@
 import PropTypes from "prop-types";
 
-const Bookmark = ({ bookmark, idx }) => {
-  console.log(bookmark);
-
+const Bookmark = ({ bookmark, idx, handleDeleteBookMark }) => {
   const { title, author, reading_time } = bookmark;
 
   return (
@@ -23,7 +21,12 @@ const Bookmark = ({ bookmark, idx }) => {
               <td>{author}</td>
               <td>{reading_time}</td>
               <td className="pl-3">
-                <button className=" bg-green-800 ">Preparing</button>
+                <button
+                  onClick={() => handleDeleteBookMark(bookmark.id)}
+                  className=" bg-green-800 "
+                >
+                  Preparing
+                </button>
               </td>
             </tr>
           </tbody>
@@ -36,6 +39,7 @@ const Bookmark = ({ bookmark, idx }) => {
 Bookmark.propTypes = {
   bookmark: PropTypes.object.isRequired,
   idx: PropTypes.number.isRequired,
+  handleDeleteBookMark: PropTypes.func.isRequired,
 };
 
 export default Bookmark;
