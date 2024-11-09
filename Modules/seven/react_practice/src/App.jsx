@@ -2,6 +2,10 @@ import { useState } from "react";
 import "./App.css";
 import Blogs from "./components/Blogs/Blogs";
 import Bookmarks from "./Bookmarks/Bookmarks";
+import Details from "./components/Details/Details";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [bookmarks, setBookmarks] = useState([]);
@@ -15,7 +19,7 @@ function App() {
       setBookmarks(newBookMarks);
       setCount(count + 1);
     } else {
-      alert("already exist");
+      toast("Already added");
     }
   };
 
@@ -27,13 +31,19 @@ function App() {
         <h4 className=" text-center">Our blogs</h4>
 
         <div className="container mx-auto mt-4">
-          <div className="flex justify-between">
+          <ToastContainer></ToastContainer>
+
+          <div className="flex justify-between mt-12">
             <div className="blogs-container w-[60%]">
               <Blogs handleAddToBookMark={handleAddToBookMark}></Blogs>
             </div>
 
             <div className="bookmark-container w-[40%]  mr-4">
               <Bookmarks count={count} bookmarks={bookmarks}></Bookmarks>
+
+              <div className="mt-3">
+                <Details></Details>
+              </div>
             </div>
           </div>
         </div>
