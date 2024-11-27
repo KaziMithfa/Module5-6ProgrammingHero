@@ -1,6 +1,5 @@
-import React from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -8,6 +7,9 @@ const Header = () => {
       <nav>
         <span>My Website</span>
         <Link to="/">Home</Link>
+        <NavLink to="/users">Users</NavLink>
+        <NavLink to="/posts">Posts</NavLink>
+
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
       </nav>
