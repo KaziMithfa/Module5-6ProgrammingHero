@@ -1,0 +1,11 @@
+E:\C# Learning\NugetPackageExerciese\NugetPackageExerciese\bin\Release\net8.0\NugetPackageExerciese.deps.json
+E:\C# Learning\NugetPackageExerciese\NugetPackageExerciese\bin\Release\net8.0\NugetPackageExerciese.dll
+E:\C# Learning\NugetPackageExerciese\NugetPackageExerciese\bin\Release\net8.0\NugetPackageExerciese.pdb
+E:\C# Learning\NugetPackageExerciese\NugetPackageExerciese\obj\Release\net8.0\NugetPackageExerciese.GeneratedMSBuildEditorConfig.editorconfig
+E:\C# Learning\NugetPackageExerciese\NugetPackageExerciese\obj\Release\net8.0\NugetPackageExerciese.AssemblyInfoInputs.cache
+E:\C# Learning\NugetPackageExerciese\NugetPackageExerciese\obj\Release\net8.0\NugetPackageExerciese.AssemblyInfo.cs
+E:\C# Learning\NugetPackageExerciese\NugetPackageExerciese\obj\Release\net8.0\NugetPackageExerciese.csproj.CoreCompileInputs.cache
+E:\C# Learning\NugetPackageExerciese\NugetPackageExerciese\obj\Release\net8.0\NugetPackageExerciese.dll
+E:\C# Learning\NugetPackageExerciese\NugetPackageExerciese\obj\Release\net8.0\refint\NugetPackageExerciese.dll
+E:\C# Learning\NugetPackageExerciese\NugetPackageExerciese\obj\Release\net8.0\NugetPackageExerciese.pdb
+E:\C# Learning\NugetPackageExerciese\NugetPackageExerciese\obj\Release\net8.0\ref\NugetPackageExerciese.dll

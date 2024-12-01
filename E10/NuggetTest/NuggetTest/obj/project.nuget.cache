@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nQFugOforM71X8ahqQ0Vxq9en95W89ZHH0r7fSB5v1Zls2mNX1psXOptwaOCWSuhHq80hpQP8kR0pCdOs4VBaw==",
+  "success": true,
+  "projectFilePath": "E:\\C# Learning\\NuggetTest\\NuggetTest\\NuggetTest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\nugetpackageexerciese\\1.0.0\\nugetpackageexerciese.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

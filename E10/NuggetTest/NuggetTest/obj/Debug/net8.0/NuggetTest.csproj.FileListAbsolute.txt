@@ -1,0 +1,17 @@
+E:\C# Learning\NuggetTest\NuggetTest\bin\Debug\net8.0\NuggetTest.exe
+E:\C# Learning\NuggetTest\NuggetTest\bin\Debug\net8.0\NuggetTest.deps.json
+E:\C# Learning\NuggetTest\NuggetTest\bin\Debug\net8.0\NuggetTest.runtimeconfig.json
+E:\C# Learning\NuggetTest\NuggetTest\bin\Debug\net8.0\NuggetTest.dll
+E:\C# Learning\NuggetTest\NuggetTest\bin\Debug\net8.0\NuggetTest.pdb
+E:\C# Learning\NuggetTest\NuggetTest\bin\Debug\net8.0\NugetPackageExerciese.dll
+E:\C# Learning\NuggetTest\NuggetTest\obj\Debug\net8.0\NuggetTest.csproj.AssemblyReference.cache
+E:\C# Learning\NuggetTest\NuggetTest\obj\Debug\net8.0\NuggetTest.GeneratedMSBuildEditorConfig.editorconfig
+E:\C# Learning\NuggetTest\NuggetTest\obj\Debug\net8.0\NuggetTest.AssemblyInfoInputs.cache
+E:\C# Learning\NuggetTest\NuggetTest\obj\Debug\net8.0\NuggetTest.AssemblyInfo.cs
+E:\C# Learning\NuggetTest\NuggetTest\obj\Debug\net8.0\NuggetTest.csproj.CoreCompileInputs.cache
+E:\C# Learning\NuggetTest\NuggetTest\obj\Debug\net8.0\NuggetTest.csproj.CopyComplete
+E:\C# Learning\NuggetTest\NuggetTest\obj\Debug\net8.0\NuggetTest.dll
+E:\C# Learning\NuggetTest\NuggetTest\obj\Debug\net8.0\refint\NuggetTest.dll
+E:\C# Learning\NuggetTest\NuggetTest\obj\Debug\net8.0\NuggetTest.pdb
+E:\C# Learning\NuggetTest\NuggetTest\obj\Debug\net8.0\NuggetTest.genruntimeconfig.cache
+E:\C# Learning\NuggetTest\NuggetTest\obj\Debug\net8.0\ref\NuggetTest.dll
