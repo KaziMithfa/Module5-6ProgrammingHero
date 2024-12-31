@@ -11,12 +11,12 @@ const AppliedJobs = () => {
   const handleJobsFilter = (filter) => {
     if (filter === "all") {
       setDisplayJobs(appliedJobs);
-    } else if (filter === "remote") {
+    } else if (filter === "Remote") {
       const remoteJobs = appliedJobs.filter(
         (job) => job.remote_or_onsite === "Remote"
       );
       setDisplayJobs(remoteJobs);
-    } else if (filter === "onsite") {
+    } else if (filter === "Onsite ") {
       const onsiteJobs = appliedJobs.filter(
         (job) => job.remote_or_onsite === "Onsite"
       );

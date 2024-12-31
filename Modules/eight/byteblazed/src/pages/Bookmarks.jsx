@@ -15,7 +15,6 @@ const Bookmarks = () => {
     const storedBlogs = getBlogs();
     setBlogs(storedBlogs);
   };
-
   if (blogs.length < 1) {
     return (
       <EmptyState
