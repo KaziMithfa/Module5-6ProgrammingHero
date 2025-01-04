@@ -19,9 +19,7 @@ const NewsCard = ({ news }) => {
             </Link>
           </p>
         ) : (
-          <p>
-            <details></details>
-          </p>
+          <p>{details}</p>
         )}
       </div>
     </div>

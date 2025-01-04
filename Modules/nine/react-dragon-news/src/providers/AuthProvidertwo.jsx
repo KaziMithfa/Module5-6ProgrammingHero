@@ -1,4 +1,5 @@
-import { createContext, useEffect, useState } from "react";
+// creating the AuthProvider for practice
+
 import {
   createUserWithEmailAndPassword,
   getAuth,
@@ -6,22 +7,27 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
+import { createContext, useEffect, useState } from "react";
 import app from "../firebase/firebase.config";
 
-// creating the context here.....
-export const AuthContext = createContext(null);
+export const AuthContexttwo = createContext(null);
+// getting the firebase auth because we need this
+
 const auth = getAuth(app);
 
-const AuthProvider = ({ children }) => {
+const AuthProvidertwo = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  // creating the user function
   const createUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
-  const signIn = (email, password) => {
+  // creating the sign in function
+
+  const LoginUser = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
@@ -32,28 +38,24 @@ const AuthProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+    const unSubscribed = onAuthStateChanged(auth, (currentUser) => {
       console.log("user in the auth state changed ", currentUser);
       setUser(currentUser);
       setLoading(false);
     });
 
     return () => {
-      unSubscribe();
+      unSubscribed();
     };
   }, []);
 
-  const authInfo = {
-    user,
-    loading,
-    createUser,
-    signIn,
-    logout,
-  };
+  const authInfotwo = { user, loading, createUser, LoginUser, logout };
 
   return (
-    <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
+    <AuthContexttwo.Provider value={authInfotwo}>
+      {children}
+    </AuthContexttwo.Provider>
   );
 };
 
-export default AuthProvider;
+export default AuthProvidertwo;

@@ -25,6 +25,10 @@ const NavBar = () => {
       </li>
 
       <li>
+        <NavLink to="/important">Important</NavLink>
+      </li>
+
+      <li>
         <NavLink to="/login">Login</NavLink>
       </li>
     </>
