@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import auth from "../firebase/firebase.config";
 import {
   createUserWithEmailAndPassword,
+  GithubAuthProvider,
   GoogleAuthProvider,
   onAuthStateChanged,
   signInWithEmailAndPassword,
