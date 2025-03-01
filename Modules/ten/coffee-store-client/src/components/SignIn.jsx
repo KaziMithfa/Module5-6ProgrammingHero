@@ -20,13 +20,16 @@ const SignIn = () => {
           lastLoggedAt: result.user?.metadata?.lastSignInTime,
         };
         // update last logged at the mongoDB database
-        fetch("http://localhost:5000/users", {
-          method: "PATCH",
-          headers: {
-            "content-type": "application/json",
-          },
-          body: JSON.stringify(user),
-        })
+        fetch(
+          "https://coffee-store-server-b48v211yv-kazi-md-abu-mithfas-projects.vercel.app/users",
+          {
+            method: "PATCH",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(user),
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
