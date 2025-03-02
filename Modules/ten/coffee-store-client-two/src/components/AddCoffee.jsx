@@ -1,4 +1,5 @@
 import React from "react";
+import Swal from "sweetalert2";
 
 const AddCoffee = () => {
   const handleAddCoffee = (e) => {
@@ -23,7 +24,7 @@ const AddCoffee = () => {
       photo,
     };
 
-    console.log(newCoffee);
+    //console.log(newCoffee);
     // send data to the server
     fetch("http://localhost:5000/coffees", {
       method: "POST",
@@ -34,7 +35,14 @@ const AddCoffee = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: "the data has been uploaded successfully in the database",
+            text: "Do you want to continue",
+            icon: "success",
+            confirmButtonText: "OK",
+          });
+        }
       });
   };
 
