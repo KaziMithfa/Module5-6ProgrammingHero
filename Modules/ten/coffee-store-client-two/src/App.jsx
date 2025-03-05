@@ -14,7 +14,12 @@ function App() {
 
         <div className="grid md:grid-cols-2 gap-4">
           {coffees.map((coffee) => (
-            <CoffeeCard key={coffee._id} coffee={coffee}></CoffeeCard>
+            <CoffeeCard
+              key={coffee._id}
+              coffee={coffee}
+              coffees={coffees}
+              setCoffees={setCoffees}
+            ></CoffeeCard>
           ))}
         </div>
       </div>
