@@ -26,13 +26,16 @@ const AddCoffee = () => {
 
     //console.log(newCoffee);
     // send data to the server
-    fetch("http://localhost:5000/coffees", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newCoffee),
-    })
+    fetch(
+      "https://coffee-store-server-ne6o2dze6-kazi-md-abu-mithfas-projects.vercel.app/coffees",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newCoffee),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
