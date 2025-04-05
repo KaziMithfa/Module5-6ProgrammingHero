@@ -13,7 +13,8 @@ app.use(cors());
 app.use(express.json());
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.6salq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
-console.log(uri);
+
+//console.log(uri);
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
@@ -31,6 +32,7 @@ async function run() {
 
     const coffeeCollection = client.db("coffeeData").collection("coffee");
 
+    // here we are getting all the  data
     app.get("/coffee", async (req, res) => {
       const cursor = coffeeCollection.find();
       const result = await cursor.toArray();
@@ -44,9 +46,10 @@ async function run() {
       res.send(result);
     });
 
+    // here we are posting only one data
     app.post("/coffee", async (req, res) => {
       const newCoffee = req.body;
-      console.log(newCoffee);
+      //console.log(newCoffee);
       const result = await coffeeCollection.insertOne(newCoffee);
       res.send(result);
     });
