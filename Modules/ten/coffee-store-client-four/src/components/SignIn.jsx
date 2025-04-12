@@ -21,7 +21,7 @@ const SignIn = () => {
         };
         // update last logged in the database
 
-        fetch("https://coffee-store-server-three-1i407rmbi.vercel.app/users", {
+        fetch("https://coffee-store-server-three-five.vercel.app/users", {
           method: "PATCH",
           headers: {
             "content-type": "application/json",
