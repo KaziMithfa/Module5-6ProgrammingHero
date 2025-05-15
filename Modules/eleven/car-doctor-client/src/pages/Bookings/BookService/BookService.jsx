@@ -1,8 +1,8 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
-import { AuthContext } from "../../providers/AuthProvider";
+import { AuthContext } from "../../../providers/AuthProvider";
 
-const CheckOut = () => {
+const BookService = () => {
   const service = useLoaderData();
   const { title, _id, price, img } = service;
 
@@ -100,4 +100,4 @@ const CheckOut = () => {
   );
 };
 
-export default CheckOut;
+export default BookService;
