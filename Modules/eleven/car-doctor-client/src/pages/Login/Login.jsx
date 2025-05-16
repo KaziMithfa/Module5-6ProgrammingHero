@@ -1,10 +1,13 @@
 import React, { useContext } from "react";
 import img from "../../../src/assets/assets/images/login/login.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const handleLogin = (e) => {
     e.preventDefault();
 
@@ -15,6 +18,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        navigate(location?.state ? location?.state : "/");
       })
       .catch((error) => {
         console.log(error);
@@ -65,8 +69,8 @@ const Login = () => {
           </form>
           <p className="my-4">
             New to Car Doctors{" "}
-            <Link className="text-orange-600 font-bold" to="/signup">
-              Sign Up
+            <Link className="text-orange-600 font-bold" to="/login">
+              Login
             </Link>
           </p>
         </div>
