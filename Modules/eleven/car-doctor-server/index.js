@@ -15,8 +15,7 @@ app.use(
 );
 app.use(express.json());
 
-console.log("USER:", process.env.DB_USER);
-console.log("PASS:", process.env.DB_PASS);
+console.log(process.env.DB_PASS);
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.6salq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
@@ -37,7 +36,7 @@ async function run() {
     const serviceCollection = client.db("carDoctor").collection("services");
     const bookingCollection = client.db("carDoctor").collection("bookings");
 
-    // auth related api
+    //auth related apis
     app.post("/jwt", async (req, res) => {
       const user = req.body;
       console.log("user for token", user);
@@ -60,7 +59,7 @@ async function run() {
       res.clearCookie("token", { maxAge: 0 }).send({ success: true });
     });
 
-    // services related api
+    // services related apis
     app.get("/services", async (req, res) => {
       const cursor = serviceCollection.find();
       const result = await cursor.toArray();
