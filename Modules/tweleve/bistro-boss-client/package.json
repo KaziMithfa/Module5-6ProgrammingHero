@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@smastrom/react-rating": "^1.5.0",
+    "@vuer-ai/react-helmet-async": "^2.0.7",
     "localforage": "^1.10.0",
     "match-sorter": "^8.1.0",
     "react": "^19.1.1",
