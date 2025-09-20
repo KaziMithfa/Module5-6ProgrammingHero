@@ -7,14 +7,20 @@ import { router } from "./Routes/Router";
 import { HelmetProvider } from "@vuer-ai/react-helmet-async";
 import AuthProviders from "./providers/AuthProviders";
 
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProviders>
-      <HelmetProvider>
-        <div className="max-w-7xl mx-auto">
-          <RouterProvider router={router} />
-        </div>
-      </HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <HelmetProvider>
+          <div className="max-w-7xl mx-auto">
+            <RouterProvider router={router} />
+          </div>
+        </HelmetProvider>
+      </QueryClientProvider>
     </AuthProviders>
   </StrictMode>
 );
