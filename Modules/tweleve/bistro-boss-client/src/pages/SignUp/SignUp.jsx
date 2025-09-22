@@ -4,8 +4,12 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../../providers/AuthProviders";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+import SocailLogin from "../../components/SocialLogin/SocailLogin";
 
 const SignUp = () => {
+  const axiosPublic = useAxiosPublic();
+
   const {
     register,
     handleSubmit,
@@ -24,16 +28,28 @@ const SignUp = () => {
       console.log(loggedUser);
       updateUserProfile(data.name, data.photoURL)
         .then(() => {
-          console.log("user profile updated");
-          reset();
+          // create user entry in the database
 
-          Swal.fire({
-            title: "You have successfully created the account!",
-            icon: "success",
-            draggable: true,
+          const userInfo = {
+            name: data.name,
+            email: data.email,
+          };
+
+          axiosPublic.post("/users", userInfo).then((res) => {
+            if (res.data.insertedId) {
+              console.log("user added to the database");
+
+              reset();
+
+              Swal.fire({
+                title: "You have successfully created the account!",
+                icon: "success",
+                draggable: true,
+              });
+
+              navigate("/");
+            }
           });
-
-          navigate("/");
         })
         .catch((error) => {
           console.log(error);
@@ -146,12 +162,13 @@ const SignUp = () => {
                 />
               </div>
             </form>
-            <p>
+            <p className="px-6">
               <small>
                 Already have an account{" "}
                 <Link to="/login">
                   <button className="btn btn-primary">Login</button>{" "}
                 </Link>
+                <SocailLogin></SocailLogin>
               </small>
             </p>
           </div>
