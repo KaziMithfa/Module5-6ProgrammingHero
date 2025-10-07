@@ -23,14 +23,16 @@ const AddItems = () => {
       },
     });
 
+    console.log(res.data);
+
     if (res.data.success) {
       // now send the menu item to data  to the server with the image
       const menuItem = {
-        name: res.data.name,
-        category: res.data.category,
+        name: data.name,
+        category: data.category,
         price: parseFloat(data.price),
         recipe: data.recipe,
-        image: res.data.display_url,
+        image: res.data.data.display_url,
       };
 
       //
@@ -52,7 +54,7 @@ const AddItems = () => {
       }
     }
 
-    console.log(res.data);
+    //console.log(res.data);
   };
 
   return (
