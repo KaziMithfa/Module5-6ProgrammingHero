@@ -62,16 +62,19 @@ const AuthProviders = ({ children }) => {
           if (res.data?.token) {
             console.log(res.data.token);
             localStorage.setItem("access-token", res.data.token);
+
+            setLoading(false);
+
             console.log("After setItem:", localStorage.getItem("access-token"));
           }
         });
       } else {
         // do something: Remove cookie
         localStorage.removeItem("access-token");
+        setLoading(false);
       }
 
       console.log("current user", currentUser);
-      setLoading(false);
     });
     return () => {
       return unSubscribe();
